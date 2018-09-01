@@ -29,8 +29,8 @@ function distanceTravelledInFeet(start_block, end_block){
   }
 }
 
-function calculatesFarePrice(start, destination){
-  const distance = distanceTravelledInFeet(start, destination)
+function calculatesFarePrice(start_block, end_block){
+  const distance = distanceTravelledInFeet(start_block, end_block)
   const base_rate = (distance - 400) * 0.02
   const free = 0
   const nope = 'cannot travel that far'
@@ -42,6 +42,6 @@ function calculatesFarePrice(start, destination){
   } else if (400 < distance < 2000){
     return fare = base_rate
   } else if (distance > 2500){
-    return fare = 'cannot travel that far'
+    return fare = nope
   }
 }
