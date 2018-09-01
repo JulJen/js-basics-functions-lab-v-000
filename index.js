@@ -37,8 +37,6 @@ function calculatesFarePrice(start, destination){
   let fare;
   if (distance <= 400){
     return fare = free
-  } else if(2000 < distance < 2500){
-    return fare = 25
   } else if (distance > 400 && distance < 2000){
     return fare = (distance - 400) * 0.02
   } else {
