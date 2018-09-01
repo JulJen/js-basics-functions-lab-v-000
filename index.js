@@ -32,8 +32,9 @@ function distanceTravelledInFeet(start_block, end_block){
 function calculatesFarePrice(start, destination){
   const distance = distanceTravelledInFeet(start, destination)
   const base_rate = (distance - 400) * 0.02
+  const free_sample = distance < 400
   let fare;
-  if (distance < 400){
+  if free_sample {
     return fare = 0
   } else if(2000 < distance < 2500){
     return fare = 25
