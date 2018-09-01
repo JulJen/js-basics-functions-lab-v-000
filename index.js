@@ -29,8 +29,8 @@ function distanceTravelledInFeet(start_block, end_block){
   }
 }
 
-function calculatesFarePrice(start_block, end_block){
-  const distance = distanceTravelledInFeet(start_block, end_block)
+function calculatesFarePrice(start, destination){
+  const distance = distanceTravelledInFeet(start, destination)
   const base_rate = (distance - 400) * 0.02
   const free = 0
   const nope = 'cannot travel that far'
