@@ -35,7 +35,7 @@ function calculatesFarePrice(start, destination){
   let fare;
   if (2000 < distance < 2500) {
     return fare = 25
-  } else if (400 < distance < 2000) {
+  } else if (400 <= distance <= 2000) {
     return fare = base_rate
   } else {
     return fare = 'cannot travel that far'
