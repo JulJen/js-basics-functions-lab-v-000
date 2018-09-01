@@ -2,6 +2,7 @@
 
 function distanceFromHqInBlocks(distance){
   const hq = 42
+  
   if (distance >= hq) {
     return distance - hq
   } else {
@@ -9,9 +10,11 @@ function distanceFromHqInBlocks(distance){
   }
 }
 
+
 function distanceFromHqInFeet(distance){
   const hq = 42
   const convert = 264
+
   if (distance >= hq) {
     return (distance - hq) * convert
   } else {
@@ -19,8 +22,10 @@ function distanceFromHqInFeet(distance){
   }
 }
 
+
 function distanceTravelledInFeet(start_block, end_block){
   const convert = 264
+
   let distance = (end_block - start_block) * convert
   if (end_block > start_block) {
     return distance
@@ -29,12 +34,14 @@ function distanceTravelledInFeet(start_block, end_block){
   }
 }
 
+
 function calculatesFarePrice(start, destination){
   const distance = distanceTravelledInFeet(start, destination)
   const base_rate = (distance - 400) * 0.02
   const free = 0
   const standard = 25
   const nope = 'cannot travel that far'
+
   let fare;
   if (distance <= 400){
     return fare = free
